@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.webp">
+</head>
+<body>
+    <header class="header">
+        <h1>Student Registration System</h1>
+        <p>Register new students, view, edit, or delete their information easily.</p>
+    </header>
+    <main>
+        <form id="studentForm" class="form">
+            <div class="input-box">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" required placeholder="Enter Your Name">
+            </div>
+            <div class="input-box">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" required placeholder="Enter Your ID">
+            </div>
+            <div class="input-box">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" required placeholder="Enter Your Email">
+            </div>
+            <div class="input-box">
+                <label for="contact">Contact No:</label>
+                <input type="tel" id="contact" required pattern="[0-9]{10}" placeholder="Enter Your Number">
+            </div>
+            <div class="radio-box">
+                <br><label>Gender:</label><br><br>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="female">Female</label>
+
+            
+                <input type="radio" name="gender" id="other" value="Other">
+                <label for="other">Other</label>
+            </div>                                                
+            <button type="submit">Add Student</button>
+        </form>
+    </main>
+    <section id="studentRecords" class="record-table">
+        <h2>Registered Students</h2>
+        <table id="studentTable" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Student ID</th>
+                    <th>Email</th>
+                    <th>Contact No</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted with JavaScript -->
+            </tbody>
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
